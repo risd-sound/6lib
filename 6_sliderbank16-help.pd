@@ -1,4 +1,4 @@
-#N canvas 385 260 1225 850 10;
+#N canvas 63 68 1225 850 10;
 #X obj 210 170 metro 125;
 #X obj 210 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -13,7 +13,7 @@
 #X obj 79 316 + 48;
 #X obj 202 345 tabread velocity;
 #X obj 79 235 t f f f;
-#N canvas 877 51 1004 593 presets 0;
+#N canvas 877 51 1004 593 presets 1;
 #X msg 34 73 \; p1 /s1 0.2 \; p1 /s2 0.3 \; p1 /s3 0.4 \; p1 /s4 0.2
 \; p1 /s5 0.3 \; p1 /s6 0.4 \; p1 /s7 0.2 \; p1 /s8 0.3 \; p1 /s9 0.4
 \; p1 /s10 0.2 \; p1 /s11 0.3 \; p1 /s12 0.4 \; p1 /s13 0.2 \; p1 /s14

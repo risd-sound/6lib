@@ -1,4 +1,4 @@
-#N canvas 188 22 1335 882 10;
+#N canvas 188 22 1335 803 10;
 #X obj 647 184 loadbang;
 #X msg 675 288 \; l5 /ramp 500 \; l5 /vol 0.4;
 #X obj 630 47 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577

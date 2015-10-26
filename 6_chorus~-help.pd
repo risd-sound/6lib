@@ -1,6 +1,6 @@
 #N canvas 167 49 842 791 10;
 #X msg 258 678 \; pd dsp \$1;
-#X obj 258 630 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 258 630 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 97 486 dac~;
 #N canvas 0 22 822 524 soundfile_player 0;
@@ -10,11 +10,11 @@
 -1;
 #X obj 274 174 soundfiler;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array soundbuffer-ch 88576 float 2;
-#X coords 0 1 88576 -1 200 140 1;
+#X array soundbuffer-ch 249193 float 2;
+#X coords 0 1 249193 -1 200 140 1;
 #X restore 482 284 graph;
 #X obj 290 235 expr 44100 / $f1;
-#X floatatom 290 272 5 0 0 0 - - -;
+#X floatatom 290 272 5 0 0 0 - - -, f 5;
 #X obj 290 331 phasor~;
 #X obj 245 364 *~;
 #X obj 290 208 float;
@@ -49,7 +49,7 @@
 #X restore 97 225 pd soundfile_player;
 #X obj 252 156 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 252 193 10 0 0 0 - - -;
+#X floatatom 252 193 10 0 0 0 - - -, f 10;
 #X text 291 159 <- open soundfile from disk;
 #X text 332 189 <- change speed of playback (default);
 #X obj 358 233 loadbang;
@@ -67,6 +67,7 @@ chorus sound. The instantian argument is the address for sending parameter
 messages.;
 #X obj 97 278 6_chorus~ a1;
 #X text 48 1 [6_chorus~];
+#X text 277 476 needs to be fixed \, no rand~ in Pd-vanilla;
 #X connect 1 0 0 0;
 #X connect 3 0 14 0;
 #X connect 4 0 3 0;
