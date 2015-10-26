@@ -1,0 +1,47 @@
+#N canvas 438 81 952 865 10;
+#X msg 239 649 \; pd dsp \$1;
+#X obj 239 601 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 135 664 dac~;
+#X floatatom 168 550 5 0 0 0 - - -, f 5;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array array_sq3 100 float 0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 376 531 graph;
+#X obj 375 448 metro 100;
+#X obj 375 411 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 415 412 <- graph;
+#X obj 375 478 tabwrite~ array_sq3;
+#X msg 287 159 \; sq1 /ph1 0.4 \; sq1 /scale1 500 \; sq1 /offset1 40
+\; sq1 /ph2 0.2 \; sq1 /scale2 555 \; sq1 /offset2 30 \; sq1 /lfo 0.4
+\; sq1 /scalelfo 10 \; sq1 /offsetlfo 10;
+#X obj 287 124 loadbang;
+#X msg 546 158 \; sq1 /ph1 0.6 \; sq1 /scale1 8000 \; sq1 /offset1
+60 \; sq1 /ph2 0.7 \; sq1 /scale2 4000 \; sq1 /offset2 10 \; sq1 /lfo
+0.7 \; sq1 /scalelfo 10 \; sq1 /offsetlfo 0.5;
+#X msg 416 158 \; sq1 /ph1 1 \; sq1 /scale1 4000 \; sq1 /offset1 60
+\; sq1 /ph2 0.2 \; sq1 /scale2 40 \; sq1 /offset2 5 \; sq1 /lfo 0.2
+\; sq1 /scalelfo 1 \; sq1 /offsetlfo 2;
+#X obj 116 -5 cnv 15 380 80 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X msg 680 158 \; sq1 /ph1 0.1 \; sq1 /scale1 2 \; sq1 /offset1 0 \;
+sq1 /ph2 0.8 \; sq1 /scale2 9000 \; sq1 /offset2 0 \; sq1 /lfo 1 \;
+sq1 /scalelfo 2 \; sq1 /offsetlfo 1;
+#X msg 681 299 \; sq1 /ph1 0.8 \; sq1 /scale1 200 \; sq1 /offset1 0
+\; sq1 /ph2 0.8 \; sq1 /scale2 300 \; sq1 /offset2 1 \; sq1 /lfo 0.96
+\; sq1 /scalelfo 3000 \; sq1 /offsetlfo 3;
+#X obj 135 586 *~ 0.2;
+#X obj 135 206 6_sqrl~ sq1;
+#X text 128 -1 [6_sqrl~];
+#X text 130 14 square waves and logic via expr~. The instantiation
+argument is the address for sending parameter messages.;
+#X connect 1 0 0 0;
+#X connect 3 0 16 1;
+#X connect 5 0 8 0;
+#X connect 6 0 5 0;
+#X connect 10 0 9 0;
+#X connect 16 0 2 0;
+#X connect 16 0 2 1;
+#X connect 17 0 8 0;
+#X connect 17 0 16 0;

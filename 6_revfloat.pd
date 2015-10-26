@@ -1,0 +1,18 @@
+#N canvas 490 38 548 440 10;
+#X obj 95 57 inlet;
+#X floatatom 95 93 5 0 0 0 - - -;
+#X obj 95 127 trigger b f;
+#X obj 95 160 f 1;
+#X obj 95 188 - 1;
+#X obj 95 241 outlet;
+#X obj 95 214 - 1;
+#X obj 175 77 cnv 15 75 25 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 181 79 [s3g 2014];
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;

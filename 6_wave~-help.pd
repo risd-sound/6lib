@@ -1,0 +1,34 @@
+#N canvas 154 51 929 839 10;
+#X obj 628 167 loadbang;
+#X msg 574 265 \; f1 /wet 0 \; f1 /rate 0.5 \; f1 /depth 0.1 \; f1
+/delay 0.2;
+#X msg 573 414 \; f1 /wet 1 \; f1 /rate 0.7 \; f1 /depth 0.9 \; f1
+/delay 0.4;
+#X msg 573 339 \; f1 /wet 1 \; f1 /rate 0.5 \; f1 /depth 0.1 \; f1
+/delay 0.3;
+#X msg 675 265 \; v1 /ramp 300 \; v1 /vol 0.5;
+#X obj 517 18 cnv 15 380 80 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 531 37 A basic wave generator: sine \, saw \, square \, and
+triangle. Range is ~2Hz - 15kHz. The instantiation argument is the
+address for sending parameter messages.;
+#X obj 628 199 t b b b b b;
+#X msg 466 265 \; w1 /glide 0.02 \; w1 /wave 2 \; w1 /freq 0.1 \; w1
+/octave 0 \; w1 /phase 0 \; w1 /out 0.4;
+#X msg 466 364 \; w1 /glide 0.02 \; w1 /wave 1 \; w1 /freq 0.5 \; w1
+/octave 3 \; w1 /phase 0 \; w1 /out 0.4;
+#X msg 466 464 \; w1 /glide 0.4 \; w1 /wave 1 \; w1 /freq 1 \; w1 /octave
+10 \; w1 /phase 0 \; w1 /out 0.4;
+#X obj 78 24 6_wave~ w1;
+#X obj 78 334 6_flanger~ f1;
+#X obj 78 498 6_linslider~ v1;
+#X obj 78 633 6_ezdac~;
+#X text 529 22 [6_wave~];
+#X connect 0 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 1 0;
+#X connect 7 3 4 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 13 0 14 1;

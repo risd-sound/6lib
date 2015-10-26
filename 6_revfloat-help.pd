@@ -1,0 +1,13 @@
+#N canvas 205 100 610 283 10;
+#X floatatom 138 129 5 0 0 0 - - -, f 5;
+#X floatatom 138 221 5 0 0 0 - - -, f 5;
+#X text 239 165 output the opposite of a float respectively;
+#X text 237 179 (neg 4 pos \, pos 4 neg);
+#X obj 96 14 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 110 33 Output the opposite of an incoming float. E.g. negative
+4 - positive 4 and vice versa.;
+#X obj 138 172 6_revfloat;
+#X text 108 18 [6_revfloat];
+#X connect 0 0 6 0;
+#X connect 6 0 1 0;

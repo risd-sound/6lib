@@ -1,0 +1,25 @@
+#N canvas 509 295 488 343 10;
+#X obj 77 178 until;
+#X obj 77 206 f;
+#X obj 316 238 sel 0;
+#X obj 311 50 inlet;
+#X obj 349 50 inlet;
+#X obj 77 34 inlet;
+#X obj 77 297 outlet;
+#X obj 77 82 t b;
+#X obj 316 146 + \$1;
+#X obj 316 193 mod \$2;
+#X obj 292 283 cnv 15 75 25 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 298 285 [s3g 2014];
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 0 8 0;
+#X connect 2 0 0 1;
+#X connect 3 0 8 1;
+#X connect 4 0 9 1;
+#X connect 5 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 1 1;
+#X connect 9 0 2 0;

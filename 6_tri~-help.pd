@@ -1,0 +1,36 @@
+#N canvas 424 204 638 622 10;
+#X obj 129 357 dac~;
+#X obj 128 304 *~ 0.3;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array array_tri1 100 float 0;
+#X coords 0 1 99 -1 200 140 1 0 0;
+#X restore 292 423 graph;
+#X obj 291 303 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 331 304 <- graph;
+#X msg 130 492 \; pd dsp \$1;
+#X obj 130 444 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 291 340 metro 50;
+#X obj 128 206 pack f 200;
+#X obj 128 233 line~;
+#X floatatom 128 178 5 0 0 0 - - -, f 5;
+#X obj 291 370 tabwrite~ array_tri1;
+#X obj 120 43 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 134 62 A triangle wave made with expr~.;
+#X obj 128 279 6_tri~;
+#X msg 177 249 0;
+#X text 207 248 phase sync;
+#X text 132 47 [6_tri~];
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 1 0 11 0;
+#X connect 3 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 14 0;
+#X connect 10 0 8 0;
+#X connect 14 0 1 0;
+#X connect 15 0 14 1;

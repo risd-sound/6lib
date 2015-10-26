@@ -1,0 +1,47 @@
+#N canvas 168 67 1193 647 10;
+#X obj 163 203 osc~ 440;
+#X floatatom 163 164 5 0 0 0 - - -, f 5;
+#X obj 113 558 dac~;
+#X msg 559 293 \; pd dsp 0;
+#X msg 624 293 \; pd dsp 1;
+#X msg 256 176 /vol \$1;
+#X msg 317 176 /ramp \$1;
+#X floatatom 256 146 5 0 1 0 - - -, f 5;
+#X floatatom 317 146 5 0 0 0 - - -, f 5;
+#X floatatom 376 298 20 0 0 0 - - -, f 20;
+#X msg 376 402 /vol \$1;
+#X floatatom 376 377 5 0 1 0 - - -, f 5;
+#X floatatom 376 345 20 0 0 0 - - -, f 20;
+#X floatatom 163 343 5 0 0 0 - - -, f 5;
+#X obj 163 382 osc~ 300;
+#X obj 112 504 *~ 0.35;
+#X obj 744 241 loadbang;
+#X obj 71 27 cnv 15 380 80 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 85 47 A logarithmic \, audio taper (sine) GUI volume slider.
+The instantiation argument is the address for sending parameter messages.
+;
+#X msg 744 289 \; 1s /ramp 400 \; 1s /vol 0.5 \;;
+#X obj 376 321 6_!- 1;
+#X obj 163 231 6_logslider~ 1s;
+#X obj 163 415 6_logslider~ 2s;
+#X text 83 31 [6_logslider~];
+#X connect 0 0 21 0;
+#X connect 1 0 0 0;
+#X connect 5 0 21 1;
+#X connect 6 0 21 1;
+#X connect 7 0 5 0;
+#X connect 8 0 6 0;
+#X connect 9 0 20 0;
+#X connect 10 0 22 1;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 22 0;
+#X connect 15 0 2 0;
+#X connect 15 0 2 1;
+#X connect 16 0 19 0;
+#X connect 20 0 12 0;
+#X connect 21 0 15 0;
+#X connect 21 1 9 0;
+#X connect 22 0 15 0;

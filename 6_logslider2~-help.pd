@@ -1,0 +1,39 @@
+#N canvas 168 67 1114 826 10;
+#X msg 599 120 /vol \$1;
+#X msg 660 120 /ramp \$1;
+#X floatatom 599 90 5 0 1 0 - - -, f 5;
+#X floatatom 660 90 5 0 0 0 - - -, f 5;
+#X obj 589 241 loadbang;
+#X obj 71 27 cnv 15 380 80 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 85 46 A logarithmic \, stereo audio taper (sine) GUI volume
+slider. The instantiation argument is the address for sending parameter
+messages.;
+#X msg 777 207 \; st1 /wet 0.7 \; st1 /ltime 0.7 \; st1 /rtime 0.75
+\; st1 /lfb 0.88 \; st1 /rfb 0.86;
+#X obj 589 266 t b b b b b;
+#X msg 703 337 \; k2 /ramp 400 \; k2 /vol 0.5;
+#X msg 589 336 \; k1 /ramp 400 \; k1 /vol 0.5;
+#X obj 163 231 6_logslider2~ k1;
+#X obj 163 341 6_sdelay~ st1;
+#X text 83 31 [6_logslider2~;
+#X obj 163 675 6_ezdac~;
+#X obj 163 570 6_logslider2~ k2;
+#X obj 144 172 osc~ 400;
+#X obj 228 166 osc~ 500;
+#X connect 0 0 11 2;
+#X connect 1 0 11 2;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 8 0;
+#X connect 8 0 10 0;
+#X connect 8 1 9 0;
+#X connect 8 4 7 0;
+#X connect 11 0 12 0;
+#X connect 11 1 12 1;
+#X connect 12 0 15 0;
+#X connect 12 1 15 1;
+#X connect 15 0 14 0;
+#X connect 15 1 14 1;
+#X connect 16 0 11 0;
+#X connect 17 0 11 1;

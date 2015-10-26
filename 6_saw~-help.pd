@@ -1,0 +1,33 @@
+#N canvas 424 204 616 493 10;
+#X obj 100 280 dac~;
+#X obj 99 227 *~ 0.3;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array array_saw1 100 float 0;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 263 346 graph;
+#X obj 262 226 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 302 227 <- graph;
+#X msg 101 415 \; pd dsp \$1;
+#X obj 101 367 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 262 263 metro 50;
+#X obj 99 175 line~;
+#X obj 99 151 pack f 30;
+#X floatatom 99 128 5 0 0 0 - - -, f 5;
+#X obj 262 293 tabwrite~ array_saw1;
+#X obj 96 16 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 110 35 Saw wave made with expr~.;
+#X obj 99 202 6_saw~;
+#X text 108 20 [6_saw~];
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 1 0 11 0;
+#X connect 3 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 14 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 14 0 1 0;

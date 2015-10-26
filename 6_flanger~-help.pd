@@ -1,0 +1,74 @@
+#N canvas 196 61 775 790 10;
+#X msg 242 642 \; pd dsp \$1;
+#X obj 242 594 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 78 475 dac~;
+#N canvas 0 22 822 524 soundfile_player 0;
+#X obj 152 91 openpanel;
+#X msg 152 117 open \$1;
+#X obj 152 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 274 174 soundfiler;
+#X msg 152 144 read -resize \$1 soundbuffer;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array soundbuffer 7158 float 2;
+#X coords 0 1 7158 -1 200 140 1;
+#X restore 482 284 graph;
+#X obj 290 235 expr 44100 / $f1;
+#X floatatom 290 272 5 0 0 0 - - -, f 5;
+#X obj 290 331 phasor~;
+#X obj 245 364 *~;
+#X obj 245 397 tabread4~ soundbuffer;
+#X obj 290 208 float;
+#X obj 390 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 329 306 0;
+#X text 357 307 <- cue position;
+#X text 333 271 <- playback speed;
+#X obj 245 446 outlet~;
+#X obj 152 39 inlet;
+#X obj 599 39 inlet;
+#X obj 486 450 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 9 1;
+#X connect 3 0 11 0;
+#X connect 4 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 0 19 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 16 0;
+#X connect 11 0 6 0;
+#X connect 12 0 11 0;
+#X connect 13 0 8 1;
+#X connect 17 0 2 0;
+#X connect 18 0 7 0;
+#X restore 78 205 pd soundfile_player;
+#X obj 233 136 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 233 173 10 0 0 0 - - -, f 10;
+#X text 272 139 <- open soundfile from disk;
+#X text 313 169 <- change speed of playback (default);
+#X obj 339 213 loadbang;
+#X obj 339 241 t b b b;
+#X msg 339 281 \; f1 /wet 0.2 \; f1 /rate 1 \; f1 /depth 0.4 \; f1
+/delay 0.4;
+#X msg 483 279 \; f1 /wet 1 \; f1 /rate 0.5 \; f1 /depth 0.1 \; f1
+/delay 0.2;
+#X obj 67 -7 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 81 12 Flanger effect in a GUI module. The instantiation argument
+is the address for sending parameter messages.;
+#X obj 78 258 6_flanger~ f1;
+#X text 79 -3 [6_flanger~];
+#X connect 1 0 0 0;
+#X connect 3 0 14 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 14 0 2 0;
+#X connect 14 0 2 1;

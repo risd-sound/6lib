@@ -1,0 +1,13 @@
+#N canvas 402 284 704 444 10;
+#X obj -95 32 cnv 15 380 50 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X obj 24 190 osc~ 300;
+#X obj 24 216 *~ 0.3;
+#X text -81 51 Dac + dsp on/off \, sample rate report \, and anti-click.
+;
+#X obj 24 263 6_ezdac~;
+#X text -83 36 [6_ezdac~];
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 0 4 1;
+#X coords 0 444 1 443 100 75 0;

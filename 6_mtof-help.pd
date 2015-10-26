@@ -1,0 +1,23 @@
+#N canvas 0 22 1085 470 10;
+#X obj 309 303 mtof;
+#X floatatom 159 269 5 0 0 1 _midi_note - -, f 5;
+#X floatatom 159 352 10 0 0 1 _frequency - -, f 10;
+#X floatatom 309 269 5 0 0 1 _midi_note - -, f 5;
+#X floatatom 309 352 10 0 0 1 _frequency - -, f 10;
+#X obj 162 192 hsl 128 15 0 127 0 0 empty empty 0-127 -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 159 222 5 0 0 0 - - -, f 5;
+#X obj 152 48 cnv 15 380 100 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 166 67 Functions the same as the mtof object (midi to frequency
+conversion). This may prove useful when wanting to make an adjustment
+to that conversion (as the math is done with Pd objects).;
+#X obj 159 303 6_mtof;
+#X text 164 52 [6_mtof];
+#X connect 0 0 4 0;
+#X connect 1 0 9 0;
+#X connect 3 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 6 0 3 0;
+#X connect 9 0 2 0;

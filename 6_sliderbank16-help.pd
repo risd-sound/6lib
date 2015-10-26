@@ -1,0 +1,173 @@
+#N canvas 385 260 1225 850 10;
+#X obj 210 170 metro 125;
+#X obj 210 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 211 202 int;
+#X obj 296 187 + 1;
+#X obj 79 269 tabread pitch;
+#X obj 79 341 int;
+#X floatatom 79 366 5 0 0 0 - - -, f 5;
+#X floatatom 261 141 5 0 0 0 - - -, f 5;
+#X obj 296 214 % 16;
+#X obj 79 292 * 24;
+#X obj 79 316 + 48;
+#X obj 202 345 tabread velocity;
+#X obj 79 235 t f f f;
+#N canvas 877 51 1004 593 presets 0;
+#X msg 34 73 \; p1 /s1 0.2 \; p1 /s2 0.3 \; p1 /s3 0.4 \; p1 /s4 0.2
+\; p1 /s5 0.3 \; p1 /s6 0.4 \; p1 /s7 0.2 \; p1 /s8 0.3 \; p1 /s9 0.4
+\; p1 /s10 0.2 \; p1 /s11 0.3 \; p1 /s12 0.4 \; p1 /s13 0.2 \; p1 /s14
+0.3 \; p1 /s15 0.4 \; p1 /s16 0.2 \;;
+#X msg 761 73 \; v1 /s1 0.2 \; v1 /s2 0.3 \; v1 /s3 0.4 \; v1 /s4 0.2
+\; v1 /s5 0.3 \; v1 /s6 0.4 \; v1 /s7 0.2 \; v1 /s8 0.3 \; v1 /s9 0.4
+\; v1 /s10 0.2 \; v1 /s11 0.3 \; v1 /s12 0.4 \; v1 /s13 0.2 \; v1 /s14
+0.3 \; v1 /s15 0.4 \; v1 /s16 0.2 \;;
+#X msg 34 315 \; p1 /s1 1 \; p1 /s2 1 \; p1 /s3 0.4 \; p1 /s4 0.5 \;
+p1 /s5 0.3 \; p1 /s6 0.5 \; p1 /s7 0.2 \; p1 /s8 0.3 \; p1 /s9 0.5
+\; p1 /s10 0.5 \; p1 /s11 0.5 \; p1 /s12 0.4 \; p1 /s13 0.2 \; p1 /s14
+0.3 \; p1 /s15 0.4 \; p1 /s16 0.2 \;;
+#X msg 761 315 \; v1 /s1 0.7 \; v1 /s2 0 \; v1 /s3 0.7 \; v1 /s4 0
+\; v1 /s5 0.3 \; v1 /s6 0.4 \; v1 /s7 0.2 \; v1 /s8 0.3 \; v1 /s9 0.4
+\; v1 /s10 0.2 \; v1 /s11 0.3 \; v1 /s12 0.4 \; v1 /s13 0 \; v1 /s14
+0.3 \; v1 /s15 0.4 \; v1 /s16 0.2 \;;
+#X msg 225 315 \; p1 /s1 0 \; p1 /s2 0.3 \; p1 /s3 0 \; p1 /s4 0.3
+\; p1 /s5 0 \; p1 /s6 0.3 \; p1 /s7 0 \; p1 /s8 0.3 \; p1 /s9 0 \;
+p1 /s10 0.3 \; p1 /s11 0 \; p1 /s12 0.3 \; p1 /s13 0 \; p1 /s14 0.3
+\; p1 /s15 0 \; p1 /s16 0.3 \;;
+#X msg 318 315 \; p1 /s1 0 \; p1 /s2 0.3 \; p1 /s3 0 \; p1 /s4 0.3
+\; p1 /s5 0 \; p1 /s6 0.6 \; p1 /s7 0 \; p1 /s8 0.3 \; p1 /s9 0 \;
+p1 /s10 0.6 \; p1 /s11 0 \; p1 /s12 0.3 \; p1 /s13 0 \; p1 /s14 0.3
+\; p1 /s15 0 \; p1 /s16 0.3 \;;
+#X msg 850 73 \; v1 /s1 0.5 \; v1 /s2 0.5 \; v1 /s3 0.5 \; v1 /s4 0.5
+\; v1 /s5 0.5 \; v1 /s6 0.5 \; v1 /s7 0.5 \; v1 /s8 0.5 \; v1 /s9 0.5
+\; v1 /s10 0.5 \; v1 /s11 0.5 \; v1 /s12 0.5 \; v1 /s13 0.5 \; v1 /s14
+0.5 \; v1 /s15 0.5 \; v1 /s16 0.5 \;;
+#X msg 323 73 \; p1 /s1 0.5 \; p1 /s2 0.55 \; p1 /s3 0.6 \; p1 /s4
+0.65 \; p1 /s5 0.7 \; p1 /s6 0.75 \; p1 /s7 0.8 \; p1 /s8 0.85 \; p1
+/s9 0.8 \; p1 /s10 0.8 \; p1 /s11 0.75 \; p1 /s12 0.7 \; p1 /s13 0.65
+\; p1 /s14 0.6 \; p1 /s15 0.55 \; p1 /s16 0.5 \;;
+#X msg 225 73 \; p1 /s1 0.05 \; p1 /s2 0.05 \; p1 /s3 0 \; p1 /s4 0.55
+\; p1 /s5 0.5 \; p1 /s6 0.5 \; p1 /s7 0.8 \; p1 /s8 0.55 \; p1 /s9
+0.5 \; p1 /s10 0.55 \; p1 /s11 0.55 \; p1 /s12 0.5 \; p1 /s13 0.55
+\; p1 /s14 0.5 \; p1 /s15 0.5 \; p1 /s16 0.5 \;;
+#X msg 126 73 \; p1 /s1 0.15 \; p1 /s2 0.15 \; p1 /s3 0.15 \; p1 /s4
+0.15 \; p1 /s5 0.15 \; p1 /s6 0.15 \; p1 /s7 0.15 \; p1 /s8 0.25 \;
+p1 /s9 0.25 \; p1 /s10 0.15 \; p1 /s11 0.15 \; p1 /s12 0.15 \; p1 /s13
+0.25 \; p1 /s14 0.25 \; p1 /s15 0.15 \; p1 /s16 0.15 \;;
+#X msg 850 315 \; v1 /s1 0 \; v1 /s2 0 \; v1 /s3 0.5 \; v1 /s4 0 \;
+v1 /s5 0 \; v1 /s6 0.5 \; v1 /s7 0 \; v1 /s8 0 \; v1 /s9 0 \; v1 /s10
+0 \; v1 /s11 0.5 \; v1 /s12 0.5 \; v1 /s13 0 \; v1 /s14 0 \; v1 /s15
+0 \; v1 /s16 0 \;;
+#X msg 126 315 \; p1 /s1 0 \; p1 /s2 0 \; p1 /s3 0.2 \; p1 /s4 0.2
+\; p1 /s5 0.2 \; p1 /s6 0.25 \; p1 /s7 0 \; p1 /s8 0 \; p1 /s9 0 \;
+p1 /s10 0 \; p1 /s11 0.25 \; p1 /s12 0 \; p1 /s13 0.2 \; p1 /s14 0
+\; p1 /s15 0 \; p1 /s16 0.2 \;;
+#X text 132 26 pitches;
+#X text 769 32 velocities;
+#X obj 396 20 loadbang;
+#X obj 396 43 t b b b;
+#X connect 14 0 15 0;
+#X connect 15 0 0 0;
+#X connect 15 2 6 0;
+#X restore 52 143 pd presets;
+#X obj 325 110 expr 1000/($f1/60);
+#X floatatom 325 77 5 0 0 0 - - -, f 5;
+#X msg 236 45 400;
+#X msg 266 45 430;
+#X msg 296 45 460;
+#X msg 325 45 490;
+#X msg 355 45 540;
+#X msg 386 45 580;
+#X floatatom 441 87 5 0 0 0 - - -, f 5;
+#X obj 441 66 / 2;
+#X text 520 749 partly based on MobMuPlat sequencer example;
+#X obj 79 469 noteout;
+#X obj 79 443 makenote;
+#X floatatom 79 409 5 0 0 1 pitch_midi - -, f 5;
+#X floatatom 202 409 5 0 0 1 velocity_midi - -, f 5;
+#X floatatom 273 519 5 0 0 1 length_ms - -, f 5;
+#X obj 202 379 * 127;
+#X msg 273 494 50;
+#X obj 273 457 loadbang;
+#X obj 412 153 6_sliderbank16 p1;
+#X obj 548 153 6_sliderbank16 v1;
+#X obj 412 658 tabwrite pitch;
+#X obj 412 547 list split 1;
+#X obj 500 546 t l;
+#X obj 412 519 t l l;
+#X obj 454 572 list length;
+#X obj 438 622 - 1;
+#X obj 438 597 int;
+#X obj 412 573 t f b;
+#X obj 548 549 list split 1;
+#X obj 636 548 t l;
+#X obj 548 521 t l l;
+#X obj 590 574 list length;
+#X obj 574 624 - 1;
+#X obj 574 599 int;
+#X obj 548 575 t f b;
+#X obj 412 680 table pitch 16;
+#X obj 548 659 tabwrite velocity;
+#X obj 548 681 table velocity 16;
+#X obj 630 47 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 642 51 [6_sliderbank16];
+#X text 644 66 Bank o' 16 sliders \, useful for writing to a table
+;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 0 12 0;
+#X connect 3 0 8 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 0 27 0;
+#X connect 7 0 0 1;
+#X connect 8 0 2 1;
+#X connect 9 0 10 0;
+#X connect 10 0 5 0;
+#X connect 11 0 30 0;
+#X connect 12 0 4 0;
+#X connect 12 2 11 0;
+#X connect 14 0 7 0;
+#X connect 15 0 14 0;
+#X connect 15 0 23 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 0;
+#X connect 18 0 15 0;
+#X connect 19 0 15 0;
+#X connect 20 0 15 0;
+#X connect 21 0 15 0;
+#X connect 23 0 22 0;
+#X connect 26 0 25 0;
+#X connect 26 1 25 1;
+#X connect 27 0 26 0;
+#X connect 28 0 26 1;
+#X connect 29 0 26 2;
+#X connect 30 0 28 0;
+#X connect 31 0 29 0;
+#X connect 32 0 31 0;
+#X connect 33 0 38 0;
+#X connect 34 0 45 0;
+#X connect 36 0 42 0;
+#X connect 36 1 37 0;
+#X connect 37 0 36 0;
+#X connect 38 0 36 0;
+#X connect 38 1 39 0;
+#X connect 39 0 41 1;
+#X connect 40 0 41 1;
+#X connect 40 0 35 1;
+#X connect 41 0 40 0;
+#X connect 42 0 35 0;
+#X connect 42 1 41 0;
+#X connect 43 0 49 0;
+#X connect 43 1 44 0;
+#X connect 44 0 43 0;
+#X connect 45 0 43 0;
+#X connect 45 1 46 0;
+#X connect 46 0 48 1;
+#X connect 47 0 48 1;
+#X connect 47 0 51 1;
+#X connect 48 0 47 0;
+#X connect 49 0 51 0;
+#X connect 49 1 48 0;

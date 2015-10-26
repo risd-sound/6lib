@@ -1,0 +1,11 @@
+#N canvas 350 103 645 348 10;
+#X floatatom 163 160 10 0 0 0 - - -, f 10;
+#X floatatom 163 261 10 0 0 0 - - -, f 10;
+#X obj 142 38 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 156 57 Millisecond to sample conversion \, based on the Pd
+sample rate set in Audio Settings.;
+#X obj 163 208 6_ms2samp;
+#X text 154 42 [6_ms2samp];
+#X connect 0 0 4 0;
+#X connect 4 0 1 0;
