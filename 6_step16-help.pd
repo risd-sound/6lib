@@ -1,0 +1,198 @@
+#N canvas 203 23 1225 850 10;
+#X obj 341 167 metro 125;
+#X obj 341 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 342 199 int;
+#X obj 427 184 + 1;
+#X floatatom 392 138 5 0 0 0 - - -, f 5;
+#X obj 427 211 % 16;
+#X obj 210 232 t f f f;
+#N canvas 774 118 534 418 presets 0;
+#X obj 108 10 loadbang;
+#X msg 34 73 \; p1 /c1 0 \; p1 /c2 1 \; p1 /c3 0 \; p1 /c4 1 \; p1
+/c5 0 \; p1 /c6 1 \; p1 /c7 0 \; p1 /c8 1 \; p1 /c9 0 \; p1 /c10 2
+\; p1 /c11 4 \; p1 /c12 1 \; p1 /c13 0 \; p1 /c14 5 \; p1 /c15 5 \;
+p1 /c16 5 \;;
+#X msg 111 73 \; p1 /c1 0 \; p1 /c2 0 \; p1 /c3 1 \; p1 /c4 1 \; p1
+/c5 1 \; p1 /c6 0 \; p1 /c7 0 \; p1 /c8 1 \; p1 /c9 0 \; p1 /c10 1
+\; p1 /c11 5 \; p1 /c12 1 \; p1 /c13 4 \; p1 /c14 5 \; p1 /c15 5 \;
+p1 /c16 5 \;;
+#X msg 192 73 \; p1 /c1 0 \; p1 /c2 1 \; p1 /c3 0 \; p1 /c4 1 \; p1
+/c5 0 \; p1 /c6 1 \; p1 /c7 0 \; p1 /c8 1 \; p1 /c9 0 \; p1 /c10 1
+\; p1 /c11 0 \; p1 /c12 1 \; p1 /c13 0 \; p1 /c14 1 \; p1 /c15 0 \;
+p1 /c16 1 \;;
+#X msg 272 73 \; p1 /c1 0 \; p1 /c2 1 \; p1 /c3 0 \; p1 /c4 1 \; p1
+/c5 0 \; p1 /c6 1 \; p1 /c7 0 \; p1 /c8 1 \; p1 /c9 0 \; p1 /c10 1
+\; p1 /c11 0 \; p1 /c12 1 \; p1 /c13 0 \; p1 /c14 1 \; p1 /c15 0 \;
+p1 /c16 1 \;;
+#X msg 352 73 \; p1 /c1 0 \; p1 /c2 0 \; p1 /c3 0 \; p1 /c4 1 \; p1
+/c5 1 \; p1 /c6 1 \; p1 /c7 0 \; p1 /c8 1 \; p1 /c9 0 \; p1 /c10 1
+\; p1 /c11 0 \; p1 /c12 1 \; p1 /c13 5 \; p1 /c14 4 \; p1 /c15 0 \;
+p1 /c16 1 \;;
+#X msg 428 73 \; p1 /c1 4 \; p1 /c2 0 \; p1 /c3 4 \; p1 /c4 1 \; p1
+/c5 4 \; p1 /c6 1 \; p1 /c7 0 \; p1 /c8 1 \; p1 /c9 0 \; p1 /c10 1
+\; p1 /c11 4 \; p1 /c12 4 \; p1 /c13 4 \; p1 /c14 4 \; p1 /c15 0 \;
+p1 /c16 1 \;;
+#X connect 0 0 1 0;
+#X restore 1036 150 pd presets;
+#X obj 456 107 expr 1000/($f1/60);
+#X floatatom 456 74 5 0 0 0 - - -, f 5;
+#X msg 367 42 400;
+#X msg 397 42 430;
+#X msg 427 42 460;
+#X msg 456 42 490;
+#X msg 486 42 540;
+#X msg 517 42 580;
+#X floatatom 572 84 5 0 0 0 - - -, f 5;
+#X obj 572 63 / 2;
+#X obj 975 476 list split 1;
+#X obj 1063 475 t l;
+#X obj 975 448 t l l;
+#X obj 1017 501 list length;
+#X obj 1001 576 - 1;
+#X obj 1001 549 int;
+#X obj 975 502 t f b;
+#X obj 675 35 cnv 15 380 60 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X obj 744 147 6_step16 p1;
+#X text 687 39 [6_step16];
+#X obj 975 612 tabwrite triggersample;
+#X obj 975 634 table triggersample 16;
+#X obj 210 266 tabread triggersample;
+#X floatatom 210 316 5 0 0 0 - - -, f 5;
+#X obj 210 373 select 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16;
+#X obj 210 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 228 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 247 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 265 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 284 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 302 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 321 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 339 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 358 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 376 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 395 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 413 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 432 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 450 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 469 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 487 428 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 411 706 dac~;
+#X obj 30 499 6_sampleplay~ s1;
+#X obj 200 573 +~;
+#X obj 134 499 6_sampleplay~ s2;
+#X obj 238 499 6_sampleplay~ s3;
+#X obj 342 499 6_sampleplay~ s4;
+#X obj 618 573 +~;
+#X obj 448 499 6_sampleplay~ s5;
+#X obj 552 499 6_sampleplay~ s6;
+#X obj 656 499 6_sampleplay~ s7;
+#X obj 760 499 6_sampleplay~ s8;
+#X msg 542 690 \; s1 /read ./sounds/Kick1.wav;
+#X msg 542 724 \; s2 /read ./sounds/Snare1.wav;
+#X obj 210 292 + 1;
+#X msg 542 759 \; s3 /read ./sounds/Cymbal1.wav;
+#X msg 542 793 \; s4 /read ./sounds/Cowbell1.wav;
+#X msg 744 689 \; s5 /read ./sounds/HiHatCl1.wav;
+#X msg 744 723 \; s6 /read ./sounds/HiHatOp1.wav;
+#X msg 744 758 \; s7 /read ./sounds/Tom1.wav;
+#X msg 744 792 \; s8 /read ./sounds/Tom2.wav;
+#X obj 742 568 loadbang;
+#X obj 742 590 t b b b b b b b b;
+#X text 689 53 Bank of 16 \, 16-position vertical radio buttons \,
+useful for writing to a table \; for drum sequencer this only supports
+one sample trigger at a time;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 0 6 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 1;
+#X connect 5 0 2 1;
+#X connect 6 0 30 0;
+#X connect 8 0 4 0;
+#X connect 9 0 8 0;
+#X connect 9 0 17 0;
+#X connect 10 0 9 0;
+#X connect 11 0 9 0;
+#X connect 12 0 9 0;
+#X connect 13 0 9 0;
+#X connect 14 0 9 0;
+#X connect 15 0 9 0;
+#X connect 17 0 16 0;
+#X connect 18 0 24 0;
+#X connect 18 1 19 0;
+#X connect 19 0 18 0;
+#X connect 20 0 18 0;
+#X connect 20 1 21 0;
+#X connect 21 0 23 1;
+#X connect 22 0 23 1;
+#X connect 22 0 28 1;
+#X connect 23 0 22 0;
+#X connect 24 0 28 0;
+#X connect 24 1 23 0;
+#X connect 26 0 20 0;
+#X connect 30 0 62 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 32 1 34 0;
+#X connect 32 2 35 0;
+#X connect 32 3 36 0;
+#X connect 32 4 37 0;
+#X connect 32 5 38 0;
+#X connect 32 6 39 0;
+#X connect 32 7 40 0;
+#X connect 32 8 41 0;
+#X connect 32 9 42 0;
+#X connect 32 10 43 0;
+#X connect 32 11 44 0;
+#X connect 32 12 45 0;
+#X connect 32 13 46 0;
+#X connect 32 14 47 0;
+#X connect 32 15 48 0;
+#X connect 33 0 50 0;
+#X connect 34 0 52 0;
+#X connect 35 0 53 0;
+#X connect 36 0 54 0;
+#X connect 37 0 56 0;
+#X connect 38 0 57 0;
+#X connect 39 0 58 0;
+#X connect 40 0 59 0;
+#X connect 50 0 51 0;
+#X connect 51 0 49 0;
+#X connect 51 0 49 1;
+#X connect 52 0 51 1;
+#X connect 53 0 51 0;
+#X connect 54 0 51 1;
+#X connect 55 0 49 0;
+#X connect 55 0 49 1;
+#X connect 56 0 55 0;
+#X connect 57 0 55 1;
+#X connect 58 0 55 0;
+#X connect 59 0 55 1;
+#X connect 62 0 31 0;
+#X connect 69 0 70 0;
+#X connect 70 0 60 0;
+#X connect 70 1 61 0;
+#X connect 70 2 63 0;
+#X connect 70 3 64 0;
+#X connect 70 4 65 0;
+#X connect 70 5 66 0;
+#X connect 70 6 67 0;
+#X connect 70 7 68 0;
