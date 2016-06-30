@@ -19,9 +19,9 @@
 #X obj 598 273 * 12;
 #X floatatom 598 233 5 0 0 0 - - -, f 5;
 #X obj 110 142 vradio 20 1 0 12 empty empty range 0 -8 0 10 -262144
--1 -1 8;
+-1 -1 9;
 #X obj 140 164 vsl 20 215 0 1 0 0 empty empty frequency 0 -9 0 10 -262144
--1 -1 11673 1;
+-1 -1 4300 1;
 #X obj 598 251 + 1;
 #N canvas 0 22 636 583 tri 0;
 #X msg 225 136 0;
@@ -137,14 +137,14 @@ pipe gui;
 #X obj 414 244 *~;
 #X obj 429 215 line~;
 #X msg 429 193 \$1 40;
-#X obj 429 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 429 170 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 269 78 inlet~;
 #X obj 394 80 inlet~;
 #X obj 280 240 *~;
 #X obj 295 211 line~;
 #X msg 295 189 \$1 40;
-#X obj 295 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 295 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 490 80 inlet;
 #X floatatom 360 150 5 0 0 0 - - -, f 5;
@@ -171,11 +171,11 @@ pipe gui;
 #X connect 14 0 12 0;
 #X restore 516 559 pd signalSwitch;
 #X obj 200 362 tgl 20 0 empty empty >freq -4 -9 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X msg 56 508 0;
 #X obj 39 0 inlet~;
-#X text 108 112 >freq~ >fm~;
-#X text 105 385 sin> saw> tri> squ>;
+#X text 105 385 sn > sw > tr > sq >;
+#X text 108 112 >freq >fm;
 #X connect 1 0 50 0;
 #X connect 2 0 3 0;
 #X connect 2 0 70 0;

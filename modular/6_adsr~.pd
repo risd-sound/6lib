@@ -5,22 +5,22 @@
 #X floatatom 7 531 5 0 0 0 - - -, f 5;
 #X obj 311 5 receive \$1;
 #X obj 140 164 vsl 20 215 0 1 0 0 empty empty D 0 -9 0 10 -262144 -1
--1 14700 1;
+-1 1400 1;
 #X obj 170 184 vsl 20 195 0 1 0 0 empty empty S 0 -9 0 10 -262144 -1
--1 8400 1;
+-1 18400 1;
 #X text 79 682 s3g_2016;
 #X msg 56 508 0;
 #X obj 111 144 vsl 20 235 0 1 0 0 empty empty A 0 -9 0 10 -262144 -1
--1 2500 1;
+-1 400 1;
 #X obj 199 204 vsl 20 175 0 1 0 0 empty empty R 0 -9 0 10 -262144 -1
--1 4100 1;
+-1 9800 1;
 #X text 105 385 envelope >;
 #X obj 311 51 route /gate /attack /decay /sustain /release;
 #X obj 473 549 outlet~;
 #X text 307 75 ADSR ENVELOPE;
 #X obj 28 12 inlet;
-#X text 108 112 >gate;
-#X obj 147 113 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 108 113 >gate;
+#X obj 147 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 472 264 attack;
 #X text 543 265 release;
