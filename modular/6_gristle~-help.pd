@@ -5,10 +5,10 @@
 #X floatatom 225 45 5 0 0 0 - - -, f 5;
 #X msg 491 147 \; gr1 /speed 0.4 \; gr1 /depth 0.5 \; gr1 /bias 0.25
 \; gr1 /level 0.8 \; gr1 /waveform 3 \; gr1 /vcf 0 \; gr1 /on 1 \;
-;
+gr1 /phasereset;
 #X msg 605 147 \; gr1 /speed 0.02 \; gr1 /depth 0.25 \; gr1 /bias 0.85
 \; gr1 /level 0.8 \; gr1 /waveform 2 \; gr1 /vcf 1 \; gr1 /on 1 \;
-;
+gr1 /phasereset;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 2 0 0 1;
