@@ -1,2 +1,2 @@
 # 6lib
-Pd library of abstractions developed by RISD sonic practices research group
+Pd library of abstractions developed for RISD Sonic Practices research group
