@@ -1,0 +1,12 @@
+#N canvas 75 93 454 313 10;
+#X obj 124 136 snapshot~;
+#X obj 143 104 bang~;
+#X obj 124 58 inlet~;
+#X obj 124 222 outlet;
+#X obj 124 179 change;
+#X text 269 95 reference: Trevor Wilson;
+#X text 269 113 https://github.com/wilsontr;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 3 0;

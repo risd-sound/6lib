@@ -1,0 +1,17 @@
+#N canvas 739 231 576 277 10;
+#X obj 88 49 inlet;
+#X floatatom 108 131 5 0 0 0 - - -, f 5;
+#X obj 108 91 f;
+#X obj 199 49 inlet;
+#X obj 108 208 outlet;
+#X obj 108 168 > 0;
+#X text 88 11 float;
+#X text 199 11 bang;
+#X text 108 231 binary (1 or 0);
+#X text 269 95 reference: Trevor Wilson;
+#X text 269 113 https://github.com/wilsontr;
+#X connect 0 0 2 1;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 4 0;

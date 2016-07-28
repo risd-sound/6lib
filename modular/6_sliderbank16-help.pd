@@ -13,7 +13,7 @@
 #X obj 79 316 + 48;
 #X obj 202 345 tabread velocity;
 #X obj 79 235 t f f f;
-#N canvas 877 51 1004 593 presets 1;
+#N canvas 877 51 1004 593 presets 0;
 #X msg 34 73 \; p1 /s1 0.2 \; p1 /s2 0.3 \; p1 /s3 0.4 \; p1 /s4 0.2
 \; p1 /s5 0.3 \; p1 /s6 0.4 \; p1 /s7 0.2 \; p1 /s8 0.3 \; p1 /s9 0.4
 \; p1 /s10 0.2 \; p1 /s11 0.3 \; p1 /s12 0.4 \; p1 /s13 0.2 \; p1 /s14

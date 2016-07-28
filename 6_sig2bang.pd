@@ -1,0 +1,15 @@
+#N canvas 786 286 558 391 10;
+#X obj 220 131 snapshot~;
+#X obj 239 99 bang~;
+#X obj 220 159 < 0;
+#X obj 220 59 inlet~;
+#X obj 220 241 outlet;
+#X text 342 135 reference: Trevor Wilson;
+#X text 342 153 https://github.com/wilsontr;
+#X obj 220 188 TogEdge;
+#X text 338 236 require cyclone package: TogEdge;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 7 0;
+#X connect 3 0 0 0;
+#X connect 7 1 4 0;

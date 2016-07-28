@@ -1,0 +1,9 @@
+#N canvas 131 25 541 291 10;
+#X obj 112 163 expr ($f1 > 0 && $f2 <= 0) || ($f1 <= 0 && $f2 > 0)
+;
+#X obj 112 128 inlet;
+#X obj 415 128 inlet;
+#X obj 112 195 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
