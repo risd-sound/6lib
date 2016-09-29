@@ -1,0 +1,28 @@
+#N canvas 105 105 1401 763 10;
+#X obj 626 231 6_reel~;
+#X obj 626 181 adc~;
+#X obj 626 430 dac~, f 11;
+#X msg 902 164 /readpoint1 \$1;
+#X floatatom 902 131 5 0 0 0 - - -, f 5;
+#X floatatom 1052 131 5 0 0 0 - - -, f 5;
+#X obj 905 70 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2200 1;
+#X obj 902 96 * 100;
+#X obj 1055 70 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7600 1;
+#X obj 1052 96 * 100;
+#X msg 1052 164 /readpoint2 \$1;
+#X floatatom 819 374 15 0 0 0 - - -, f 15;
+#X connect 0 0 2 0;
+#X connect 0 1 2 1;
+#X connect 0 3 11 0;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 3 0 0 2;
+#X connect 4 0 3 0;
+#X connect 5 0 10 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 10 0 0 2;

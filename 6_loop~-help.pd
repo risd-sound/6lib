@@ -2,7 +2,7 @@
 #X msg 366 67 /rec \$1;
 #X obj 366 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 422 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 422 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 422 67 /play \$1;
 #X floatatom 488 42 5 0 0 0 - - -, f 5;
