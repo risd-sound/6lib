@@ -96,22 +96,22 @@
 #X connect 41 0 42 0;
 #X connect 43 0 18 0;
 #X connect 44 0 41 0;
-#X restore 40 244 pd recording;
+#X restore 2 244 pd recording;
 #X obj 744 -29 inlet;
 #X obj 367 764 outlet~;
-#X obj 306 363 *~;
-#X msg 338 312 \$1 20;
-#X obj 338 334 line~;
+#X obj 306 547 *~;
+#X msg 338 496 \$1 20;
+#X obj 338 518 line~;
 #X floatatom 443 249 10 0 0 0 - - -, f 10;
-#X obj 185 158 bng 30 250 50 0 empty empty pitch_reset 36 7 0 10 -262144
+#X obj 187 163 bng 30 250 50 0 empty empty pitch_reset 36 7 0 10 -262144
 -1 -1;
-#X obj 187 123 hsl 100 30 0 1 0 0 empty empty transpose 34 8 0 10 -262144
+#X obj 190 123 hsl 100 30 0 1 0 0 empty empty transpose 34 8 0 10 -262144
 -1 -1 4950 1;
-#X msg 282 206 0.5;
+#X msg 401 202 0.5;
 #X obj 792 -29 r \$1;
-#X obj 109 158 tgl 30 0 empty empty record 36 7 0 10 -262144 -1 -1
+#X obj 108 163 tgl 30 0 empty empty record 36 7 0 10 -262144 -1 -1
 0 1;
-#X obj 109 123 tgl 30 0 empty empty play 36 7 0 10 -262144 -1 -1 0
+#X obj 108 123 tgl 30 0 empty empty play 36 7 0 10 -262144 -1 -1 1
 1;
 #X msg 199 57 0;
 #X obj 643 490 f \$0;
@@ -259,10 +259,10 @@
 #X connect 58 0 57 0;
 #X connect 59 0 58 0;
 #X connect 60 0 5 0;
-#X restore 254 312 pd playback1;
-#X obj 461 359 *~;
-#X msg 493 308 \$1 20;
-#X obj 493 330 line~;
+#X restore 238 504 pd playback1;
+#X obj 461 543 *~;
+#X msg 493 492 \$1 20;
+#X obj 493 514 line~;
 #N canvas 327 132 1322 823 playback2 0;
 #X floatatom 69 197 10 0 0 0 - - -, f 10;
 #X obj 84 527 +~ 1;
@@ -390,14 +390,20 @@
 #X connect 57 0 0 0;
 #X connect 58 0 56 0;
 #X connect 59 0 5 0;
-#X restore 409 308 pd playback2;
+#X restore 403 506 pd playback2;
 #X obj 491 764 outlet~;
-#X obj 38 -69 inlet~;
+#X obj 0 -69 inlet~;
 #X msg 139 -39 1;
 #X msg 543 258 0;
 #X obj 792 63 route /rec /play /stop /transpose /pitchreset /arrayname
 /readpoint1 /readpoint2;
-#X obj 83 -69 inlet~;
+#X obj 45 -69 inlet~;
+#X obj 112 203 hsl 178 30 0 1 0 0 empty empty read_point1 34 8 0 10
+-262144 -1 -1 17700 1;
+#X obj 112 242 hsl 178 30 0 1 0 0 empty empty read_point2 34 8 0 10
+-262144 -1 -1 11600 1;
+#X obj 236 442 * 100;
+#X obj 518 446 * 100;
 #X connect 0 0 29 0;
 #X connect 0 0 26 0;
 #X connect 0 0 33 0;
@@ -444,7 +450,10 @@
 #X connect 38 3 8 0;
 #X connect 38 4 7 0;
 #X connect 38 5 15 0;
-#X connect 38 6 29 3;
-#X connect 38 7 33 3;
+#X connect 38 6 40 0;
 #X connect 39 0 0 1;
-#X coords 0 -1 1 1 200 100 1 100 100;
+#X connect 40 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 29 3;
+#X connect 43 0 33 3;
+#X coords 0 -1 1 1 200 200 1 100 100;
