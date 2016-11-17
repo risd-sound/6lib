@@ -1,7 +1,7 @@
 #N canvas 247 159 871 786 10;
 #X floatatom 108 149 10 0 0 1 ramp - -, f 10;
 #X obj 111 129 hsl 140 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--66577 -66577 0 1;
+-66577 -66577 6700 1;
 #X obj 201 8 inlet;
 #X obj -127 24 inlet~;
 #X obj -259 444 *~;
@@ -69,4 +69,4 @@
 #X connect 29 0 30 0;
 #X connect 30 0 31 0;
 #X connect 31 0 32 0;
-#X coords 0 -1 1 1 160 75 1 100 100;
+#X coords 0 -1 1 1 160 80 1 100 100;

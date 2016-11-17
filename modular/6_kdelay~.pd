@@ -29,15 +29,15 @@
 #X floatatom 775 69 5 0 0 0 - - -, f 5;
 #X obj 423 -19 inlet;
 #X obj 470 -18 r \$1;
-#X obj 110 174 hsl 80 15 0 1 0 0 empty empty ltime -2 -8 0 10 -262144
--1 -1 5800 1;
-#X obj 110 206 hsl 80 15 0 1 0 0 empty empty rtime -2 -8 0 10 -262144
--1 -1 3000 1;
-#X obj 110 239 hsl 80 15 0 1 0 0 empty empty lfb -2 -8 0 10 -262144
--1 -1 4800 1;
-#X obj 110 274 hsl 80 15 0 1 0 0 empty empty rfb -2 -8 0 10 -262144
--1 -1 5600 1;
-#X obj 110 139 hsl 80 15 0 1 0 0 empty empty wet -2 -8 0 10 -262144
+#X obj 209 127 hsl 80 15 0 1 0 0 empty empty ltime -2 -8 0 10 -262144
+-1 -1 1800 1;
+#X obj 209 159 hsl 80 15 0 1 0 0 empty empty rtime -2 -8 0 10 -262144
+-1 -1 2200 1;
+#X obj 300 127 hsl 80 15 0 1 0 0 empty empty lfb -2 -8 0 10 -262144
+-1 -1 4500 1;
+#X obj 300 159 hsl 80 15 0 1 0 0 empty empty rfb -2 -8 0 10 -262144
+-1 -1 4300 1;
+#X obj 113 143 hsl 80 15 0 1 0 0 empty empty wet -2 -8 0 10 -262144
 -1 -1 7900 1;
 #X obj 133 697 *~;
 #X obj 40 697 *~;
@@ -181,4 +181,4 @@
 #X connect 78 0 21 0;
 #X connect 79 0 24 0;
 #X connect 80 0 61 0;
-#X coords 0 -1 1 1 100 300 1 100 100;
+#X coords 0 -1 1 1 300 80 1 100 100;
