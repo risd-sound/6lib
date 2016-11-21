@@ -14,7 +14,6 @@
 #X floatatom 294 18 5 0 0 0 - - -, f 5;
 #X obj 77 74 6_osc~ w1;
 #X obj 294 74 6_lfo~ l1;
-#X text 530 87;
 #X text 528 72 [6_lfo~];
 #X connect 0 0 3 0;
 #X connect 3 3 1 0;

@@ -1,37 +1,37 @@
-#N canvas 220 22 955 892 10;
-#X obj 282 45 loadbang;
-#X obj 458 -14 cnv 15 380 80 empty empty empty 20 12 0 14 -262130 -66577
+#N canvas 220 22 1047 943 10;
+#X obj 355 105 loadbang;
+#X obj 531 46 cnv 15 380 80 empty empty empty 20 12 0 14 -262130 -66577
 0;
-#X obj 282 90 t b b b b b;
-#X msg 498 157 \; sqf /wet 0.75 \; sqf /ltime 0.5 \; sqf /rtime 0.3
+#X obj 355 150 t b b b b b;
+#X msg 571 217 \; sqf /wet 0.75 \; sqf /ltime 0.5 \; sqf /rtime 0.3
 \; sqf /lfb 0.6 \; sqf /rfb 0.4;
-#X msg 375 206 \; sqc /wet 0.7 \; sqc /rate 0.01 \; sqc /depth 0.1
+#X msg 448 266 \; sqc /wet 0.7 \; sqc /rate 0.01 \; sqc /depth 0.1
 \; sqc /delay 0.2;
-#X msg 214 146 \; sq1 /ph1 0.1 \; sq1 /scale1 10 \; sq1 /offset1 10
+#X msg 287 206 \; sq1 /ph1 0.1 \; sq1 /scale1 10 \; sq1 /offset1 10
 \; sq1 /ph2 1 \; sq1 /scale2 3000 \; sq1 /offset2 100 \; sq1 /lfo 1
 \; sq1 /scalelfo 120 \; sq1 /offsetlfo 0.1;
-#X msg 382 540 \; sq1 /scalelfo \$1;
-#X obj 381 338 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X msg 455 600 \; sq1 /scalelfo \$1;
+#X obj 454 398 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 381 415 + 1;
-#X obj 381 439 select 1 2 3 4;
-#X msg 382 482 120;
-#X obj 381 366 metro 1200;
-#X msg 455 483 300;
-#X msg 420 483 100;
-#X floatatom 508 414 5 0 0 0 - - -, f 5;
-#X obj 381 391 random 4;
-#X msg 494 484 200;
-#X msg 650 137 \; sl /vol 0.2 \; sl /ramp 300;
-#X obj 17 -29 6_sqrl~ sq1;
-#X obj 17 274 6_flanger~ sqc;
-#X obj 17 432 6_sdelay~ sqf;
-#X obj 17 637 6_logslider2~ sl;
-#X obj 17 723 6_jic~;
-#X obj 17 757 6_ezdac~;
-#X text 470 -10 [6_sqrl~];
-#X text 472 5 square waves and logic via expr~. The instantiation argument
-is the address for sending parameter messages.;
+#X obj 454 475 + 1;
+#X obj 454 499 select 1 2 3 4;
+#X msg 455 542 120;
+#X obj 454 426 metro 1200;
+#X msg 528 543 300;
+#X msg 493 543 100;
+#X floatatom 581 474 5 0 0 0 - - -, f 5;
+#X obj 454 451 random 4;
+#X msg 567 544 200;
+#X msg 723 197 \; sl /vol 0.2 \; sl /ramp 300;
+#X obj 90 31 6_sqrl~ sq1;
+#X obj 90 334 6_flanger~ sqc;
+#X obj 90 492 6_sdelay~ sqf;
+#X obj 90 697 6_logslider2~ sl;
+#X obj 90 783 6_jic~;
+#X obj 90 817 6_ezdac~;
+#X text 543 50 [6_sqrl~];
+#X text 545 65 square waves and logic via expr~. The instantiation
+argument is the address for sending parameter messages.;
 #X connect 0 0 2 0;
 #X connect 2 0 5 0;
 #X connect 2 1 4 0;

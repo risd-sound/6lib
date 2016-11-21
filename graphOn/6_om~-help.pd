@@ -11,7 +11,7 @@ o1 /width 0.1 \; o1 /out 0.3 \;;
 o1 /width 0.1 \; o1 /out 0.3 \;;
 #X obj 72 57 6_om~ o1;
 #X obj 72 451 6_linslider~ l5;
-#X obj 72 782 6_ezdac~;
+#X obj 72 617 6_ezdac~;
 #X obj 647 216 t b b;
 #X text 642 51 [6_om~];
 #X msg 554 290 \; o1 /freq 0.7 \; o1 /octave 6 \; o1 /ripple 0.5 \;

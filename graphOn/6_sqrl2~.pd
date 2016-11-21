@@ -18,11 +18,11 @@ if so outputs 1 \, if not outputs 0;
 #X obj -211 -99 r \$1;
 #X obj -249 -98 inlet;
 #X obj 110 257 hsl 80 15 0 1 0 0 empty empty ph2 -2 -8 0 10 -262144
--1 -1 1580 1;
+-1 -1 0 1;
 #X obj 110 332 hsl 80 15 0 1 0 0 empty empty lfo -2 -8 0 10 -262144
--1 -1 3160 1;
+-1 -1 0 1;
 #X obj 109 181 hsl 80 15 0 1 0 0 empty empty ph1 -2 -8 0 10 -262144
--1 -1 3160 1;
+-1 -1 0 1;
 #X text 375 600 based on FLOSS manual example: Squarewaves and Logic
 ;
 #X text 83 448 sqrl~;
