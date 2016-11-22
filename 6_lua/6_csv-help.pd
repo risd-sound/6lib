@@ -12,13 +12,13 @@ red;
 #X obj 67 349 tosymbol;
 #X obj 571 307 route 1 2 3 4 5 6 7 8 9 10 11 12 13 14;
 #X obj 468 380 prepend set;
-#X msg 468 403 do;
+#X msg 468 403 112;
 #X obj 492 434 prepend set;
-#X msg 492 457 me;
+#X msg 492 457 QHr;
 #X obj 512 532 prepend set;
-#X msg 512 555 a;
+#X msg 512 555 555;
 #X obj 550 663 prepend set;
-#X msg 550 686 favor;
+#X msg 550 686 1444;
 #X obj 601 551 prepend set;
 #X msg 601 574 hellow;
 #X obj 636 599 prepend set;
@@ -71,6 +71,7 @@ file into Pd with the [msgfile] object and the [6_killspaces] object
 that removes spaces that [msgfile] adds... which may or may not be
 beneficial \, depends on the data as it removes ALL spaces (not just
 ones added by [msgfile]).;
+#X text 247 158 [list2symbol] from zexy;
 #X connect 0 0 41 0;
 #X connect 1 0 46 0;
 #X connect 1 1 43 0;

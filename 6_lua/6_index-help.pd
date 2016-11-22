@@ -1,4 +1,4 @@
-#N canvas 100 30 1246 830 10;
+#N canvas 117 163 1246 830 10;
 #X obj 255 398 print;
 #X msg 209 45 33 100 22 99 78;
 #X msg 391 345 clear;

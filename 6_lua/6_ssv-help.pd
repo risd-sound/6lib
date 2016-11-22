@@ -1,13 +1,13 @@
 #N canvas 100 30 1500 712 10;
-#X msg 163 462 asldsal;
+#X msg 163 462 y e s ;
 #X obj 163 248 tosymbol;
-#X msg 249 462 alksdaksj;
-#X msg 336 462 adljaskjdksa;
+#X msg 249 462 n o ;
+#X msg 336 462 t he r e ;
 #X msg 110 161 yes/no/there/is/a/reason;
 #X obj 163 312 route 1 2 3 4 5 6;
-#X msg 422 462 asldaskdj;
-#X msg 508 462 alksjdasjd;
-#X msg 595 462 alkwje;
+#X msg 422 462 i s;
+#X msg 508 462 a ;
+#X msg 595 462 r e a s o n;
 #X msg 50 124 asldsal/alksdaksj/adljaskjdksa/asldaskdj/alksjdasjd/alkwje
 ;
 #X msg 184 201 y e s /n o /t he r e /i s/a /r e a s o n;

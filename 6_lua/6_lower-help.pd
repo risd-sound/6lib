@@ -1,7 +1,7 @@
 #N canvas 100 30 902 247 10;
 #X obj 146 65 tosymbol;
 #X msg 146 30 WHAT;
-#X symbolatom 146 116 10 0 0 0 - - -, f 10;
+#X symbolatom 146 116 20 0 0 0 - - -, f 20;
 #X obj 146 141 prepend set;
 #X msg 146 168 who would format anything like this!;
 #X msg 184 30 WheRe;

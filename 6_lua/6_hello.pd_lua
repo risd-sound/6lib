@@ -24,7 +24,7 @@ end
 
 function Sayhello:postinitialize()
   -- not using this right now,
-  -- but here is where one should regiter receivers or clocks
+  -- but here is where one should register receivers or clocks
 end
 
 -- this will accept any input
