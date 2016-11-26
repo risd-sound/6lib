@@ -1,6 +1,6 @@
 #N canvas 167 49 842 791 10;
 #X msg 258 678 \; pd dsp \$1;
-#X obj 258 630 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 258 630 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 97 486 dac~;
 #N canvas 0 22 822 524 soundfile_player 0;
@@ -10,8 +10,8 @@
 -1;
 #X obj 274 174 soundfiler;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array soundbuffer-ch 249193 float 2;
-#X coords 0 1 249193 -1 200 140 1;
+#X array soundbuffer-ch 125454 float 2;
+#X coords 0 1 125454 -1 200 140 1;
 #X restore 482 284 graph;
 #X obj 290 235 expr 44100 / $f1;
 #X floatatom 290 272 5 0 0 0 - - -, f 5;
@@ -67,7 +67,7 @@ chorus sound. The instantian argument is the address for sending parameter
 messages.;
 #X obj 97 278 6_chorus~ a1;
 #X text 48 1 [6_chorus~];
-#X text 277 476 needs to be fixed \, no rand~ in Pd-vanilla;
+#X text 277 476 requires cyclone library;
 #X connect 1 0 0 0;
 #X connect 3 0 14 0;
 #X connect 4 0 3 0;

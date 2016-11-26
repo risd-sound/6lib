@@ -10,6 +10,7 @@
 stats={}
 
 -- Get the mean value of a table
+
 function stats.mean( t )
   local sum = 0
   local count= 0

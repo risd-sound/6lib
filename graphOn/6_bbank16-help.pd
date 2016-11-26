@@ -1,6 +1,6 @@
 #N canvas 158 123 1225 850 10;
 #X obj 210 170 metro 125;
-#X obj 210 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 210 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 211 202 int;
 #X obj 296 187 + 1;
@@ -76,6 +76,7 @@ p1 /b16 5 \;;
 #X obj 79 296 * 3;
 #X text 644 66 Bank o' 16 \, 16-position radio buttons \, useful for
 writing to a table;
+#X text 950 576 vanilla compatible;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;

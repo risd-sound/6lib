@@ -1,7 +1,6 @@
 -- s3g 2016
 -- an object for adding spaces between characters in a string
 
-
 local Addspaces = pd.Class:new():register("6_addspaces")
 
 function Addspaces:initialize(name, atoms)

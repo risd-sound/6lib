@@ -10,7 +10,6 @@ function Indx:initialize(name, atoms)
   return true
 end
 
-
 function Indx:in_1(sel, atoms)
       for i, v in ipairs(atoms) do
         self:outlet(1, "list", {i, v})

@@ -1,0 +1,245 @@
+#N canvas 351 23 977 941 10;
+#X obj 488 51 cnv 15 380 100 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X obj 93 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 110 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 127 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 145 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 162 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 180 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 198 415 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#N canvas 127 131 1117 840 samples 0;
+#X obj -346 523 +~;
+#X obj -159 514 +~;
+#X obj -186 587 +~;
+#X obj -186 640 outlet~;
+#X obj -503 320 soundfiler;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array drum7 14600 float 2;
+#X coords 0 1 14600 -1 200 140 1;
+#X restore -65 21 graph;
+#X msg -346 394 0;
+#X msg -253 394 0;
+#X msg -160 394 0;
+#X msg -67 394 0;
+#X msg 32 394 0;
+#X msg 125 394 0;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array drum8 22226 float 2;
+#X coords 0 1 22226 -1 200 140 1 0 0;
+#X restore 141 21 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array drum9 52540 float 2;
+#X coords 0 1 52540 -1 200 140 1;
+#X restore 347 21 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array drum10 7185 float 2;
+#X coords 0 1 7185 -1 200 140 1 0 0;
+#X restore -65 180 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array drum11 30932 float 2;
+#X coords 0 1 30932 -1 200 140 1 0 0;
+#X restore 141 180 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array drum12 28600 float 2;
+#X coords 0 1 28600 -1 200 140 1 0 0;
+#X restore 347 180 graph;
+#X obj -346 346 inlet;
+#X obj -253 346 inlet;
+#X obj -160 346 inlet;
+#X obj -67 346 inlet;
+#X obj 32 346 inlet;
+#X obj 125 346 inlet;
+#X obj -105 519 +~;
+#X obj -550 38 loadbang;
+#X obj -550 60 delay 100;
+#X obj -550 84 t b b b b b b;
+#X obj -346 429 tabplay~ drum7;
+#X obj -253 429 tabplay~ drum8;
+#X obj -160 429 tabplay~ drum9;
+#X obj -67 429 tabplay~ drum10;
+#X obj 125 429 tabplay~ drum12;
+#X obj 32 429 tabplay~ drum11;
+#X msg -449 20 read -resize ./sounds/bossdr550mk2/Snare2.wav drum7
+;
+#X msg -449 81 read -resize ./sounds/bossdr550mk2/HiHatCl3.wav drum10
+;
+#X msg -449 101 read -resize ./sounds/bossdr550mk2/HiHatOp3.wav drum11
+;
+#X msg -449 40 read -resize ./sounds/bossdr550mk2/Kick4.wav drum8;
+#X msg -449 60 read -resize ./sounds/bossdr550mk2/Cymbol3.wav drum9
+;
+#X msg -449 122 read -resize ./sounds/bossdr550mk2/Tom4.wav drum12
+;
+#X obj -282 196 openpanel;
+#X msg -282 222 open \$1;
+#X obj -282 173 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -220 195 openpanel;
+#X msg -220 221 open \$1;
+#X obj -220 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -158 194 openpanel;
+#X msg -158 220 open \$1;
+#X obj -158 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -280 269 openpanel;
+#X msg -280 295 open \$1;
+#X obj -280 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -218 268 openpanel;
+#X msg -218 294 open \$1;
+#X obj -218 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -156 267 openpanel;
+#X msg -156 293 open \$1;
+#X obj -156 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -435 173 read -resize \$1 drum7;
+#X msg -435 193 read -resize \$1 drum8;
+#X msg -435 213 read -resize \$1 drum9;
+#X msg -435 232 read -resize \$1 drum10;
+#X msg -435 254 read -resize \$1 drum11;
+#X msg -435 275 read -resize \$1 drum12;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 6 0 27 0;
+#X connect 7 0 28 0;
+#X connect 8 0 29 0;
+#X connect 9 0 30 0;
+#X connect 10 0 32 0;
+#X connect 11 0 31 0;
+#X connect 17 0 6 0;
+#X connect 18 0 7 0;
+#X connect 19 0 8 0;
+#X connect 20 0 9 0;
+#X connect 21 0 10 0;
+#X connect 22 0 11 0;
+#X connect 23 0 2 1;
+#X connect 23 0 2 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 38 0;
+#X connect 26 1 35 0;
+#X connect 26 2 34 0;
+#X connect 26 3 37 0;
+#X connect 26 4 36 0;
+#X connect 26 5 33 0;
+#X connect 27 0 0 0;
+#X connect 28 0 0 1;
+#X connect 29 0 1 0;
+#X connect 30 0 1 1;
+#X connect 31 0 23 1;
+#X connect 32 0 23 0;
+#X connect 33 0 4 0;
+#X connect 34 0 4 0;
+#X connect 35 0 4 0;
+#X connect 36 0 4 0;
+#X connect 37 0 4 0;
+#X connect 38 0 4 0;
+#X connect 39 0 40 0;
+#X connect 40 0 57 0;
+#X connect 41 0 39 0;
+#X connect 42 0 43 0;
+#X connect 43 0 58 0;
+#X connect 44 0 42 0;
+#X connect 45 0 46 0;
+#X connect 46 0 59 0;
+#X connect 47 0 45 0;
+#X connect 48 0 49 0;
+#X connect 49 0 60 0;
+#X connect 50 0 48 0;
+#X connect 51 0 52 0;
+#X connect 52 0 61 0;
+#X connect 53 0 51 0;
+#X connect 54 0 55 0;
+#X connect 55 0 62 0;
+#X connect 56 0 54 0;
+#X connect 57 0 4 0;
+#X connect 58 0 4 0;
+#X connect 59 0 4 0;
+#X connect 60 0 4 0;
+#X connect 61 0 4 0;
+#X connect 62 0 4 0;
+#X restore 94 500 pd samples, f 21;
+#X obj 93 386 route x o * - ^ #;
+#X obj 93 139 prepend set;
+#X floatatom 31 44 5 0 0 0 - - -, f 5;
+#X obj 93 164 t b a;
+#X obj 729 314 loadbang;
+#X obj 236 386 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 425 577 spigot;
+#X obj 458 551 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 455 602 5 0 0 0 - - -, f 5;
+#X obj 425 638 f;
+#X obj 425 529 r endSeguy;
+#X obj 236 407 s endSeguy;
+#X obj 425 667 s rightChanSeq;
+#X text 363 505 mechanism for changing line at end of current sequence
+;
+#X obj 94 542 6_sdelay~ sd5;
+#X obj 94 752 6_ezdac~;
+#X obj 93 274 6_seqfile vf2;
+#X obj 31 22 r rightChanSeq;
+#X msg 729 341 \; vf2 /seq 1 \; vf2 /bpm 60 \; sd5 /wet 0.6 \; sd5
+/ltime 0.6 \; sd5 /rtime 0.5 \; sd5 /lfb 0.7 \; sd5 /rfb 0.6;
+#X msg 93 188 x o x — — _ _ *;
+#X msg 528 369 \; vf2 /bpm 155;
+#X msg 632 368 \; vf2 /seq 0;
+#X msg 528 418 \; vf2 /bpm 105;
+#X msg 633 417 \; vf2 /seq 1;
+#X text 500 56 [6_seqfile;
+#X msg 278 116 x o x o * x x *;
+#X msg 278 139 x o o - ^ ^ o * x x *;
+#X obj 93 115 coll ./txt/seqfile.txt;
+#C restore;
+#X msg 119 73 read ./txt/seqfile2.txt;
+#X msg 93 49 read ./txt/seqfile.txt;
+#X text 573 227 cyclone library required;
+#X connect 1 0 8 0;
+#X connect 2 0 8 1;
+#X connect 3 0 8 2;
+#X connect 4 0 8 3;
+#X connect 5 0 8 4;
+#X connect 6 0 8 5;
+#X connect 8 0 23 0;
+#X connect 8 0 23 1;
+#X connect 9 0 1 0;
+#X connect 9 1 2 0;
+#X connect 9 2 3 0;
+#X connect 9 3 4 0;
+#X connect 9 4 5 0;
+#X connect 9 5 6 0;
+#X connect 9 6 7 0;
+#X connect 10 0 12 0;
+#X connect 11 0 36 0;
+#X connect 12 0 28 0;
+#X connect 12 1 28 0;
+#X connect 13 0 27 0;
+#X connect 14 0 20 0;
+#X connect 15 0 18 0;
+#X connect 16 0 15 1;
+#X connect 17 0 18 1;
+#X connect 18 0 21 0;
+#X connect 19 0 15 0;
+#X connect 23 0 24 0;
+#X connect 23 1 24 1;
+#X connect 25 0 9 0;
+#X connect 25 1 14 0;
+#X connect 26 0 11 0;
+#X connect 28 0 25 0;
+#X connect 34 0 25 0;
+#X connect 35 0 25 0;
+#X connect 36 0 10 0;
+#X connect 37 0 36 0;
+#X connect 38 0 36 0;

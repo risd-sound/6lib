@@ -10,7 +10,6 @@ function Osdate:initialize(name, atoms)
   return true
 end
 
-
 function Osdate:in_1(sel, atoms)
   self.wkdy = tonumber(os.date("%w"))
   self.date = tonumber(os.date("%d"))

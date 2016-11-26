@@ -17,15 +17,18 @@
 #X obj 515 348 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 566 287 5 0 0 0 - - -, f 5;
+#X msg 515 370 /gate \$1;
+#X text 597 499 vanilla compatible;
 #X connect 2 0 6 2;
 #X connect 3 0 2 0;
 #X connect 4 0 6 0;
 #X connect 5 0 4 0;
-#X connect 6 1 9 0;
+#X connect 6 2 9 0;
 #X connect 8 0 9 1;
 #X connect 9 0 1 0;
 #X connect 9 0 1 1;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
-#X connect 13 0 8 0;
+#X connect 13 0 15 0;
 #X connect 14 0 12 1;
+#X connect 15 0 8 0;
