@@ -1,4 +1,4 @@
-pd.post("This is a modification of the \"simplecounter\" pdlua example")
+-- pd.post("This is a modification of the \"simplecounter\" pdlua example")
 
 local TheCounter = pd.Class:new():register("6_cup")
 
