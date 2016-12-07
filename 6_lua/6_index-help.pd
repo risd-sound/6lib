@@ -1,4 +1,4 @@
-#N canvas 117 163 1246 830 10;
+#N canvas 442 525 1246 830 10;
 #X obj 255 398 print;
 #X msg 209 45 33 100 22 99 78;
 #X msg 391 345 clear;
@@ -29,6 +29,7 @@ by "list";
 #X text 734 273 [6_index];
 #X text 736 288 Adds a numerical index to a list of items in the order
 they occur in a list;
+#X msg 111 99 x o x o x o x o;
 #X connect 1 0 21 0;
 #X connect 2 0 12 0;
 #X connect 2 0 15 0;
@@ -47,3 +48,4 @@ they occur in a list;
 #X connect 21 0 0 0;
 #X connect 21 0 14 0;
 #X connect 21 0 15 0;
+#X connect 25 0 21 0;
